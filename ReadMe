@@ -1,0 +1,109 @@
+## Chess Game in Java (Command Line)
+
+### Description
+
+This is a simple command-line-based chess game implemented in Java. The game supports all major chess pieces, including pawns, rooks, knights, bishops, queens, and kings, with basic move validation for each piece. The game alternates between two players (White and Black), who input their moves via standard chess notation.
+
+### Features
+- **Turn-based gameplay**: Alternates turns between White and Black players.
+- **Valid move enforcement**: Each piece follows its respective movement rules.
+- **Text-based UI**: The board is displayed in the console, and moves are entered as chess notation.
+- **OOP Design**: The game is designed using Object-Oriented Programming (OOP) principles, with each piece represented as its own class.
+
+### How to Use the Program
+
+1. **Compile the Program**:
+   First, make sure you have Java installed on your machine. You can compile the program using the following command:
+   
+   ```bash
+   javac Chess.java
+   ```
+
+2. **Run the Program**:
+   After compilation, run the program with the following command:
+   
+   ```bash
+   java Chess
+   ```
+
+3. **Gameplay Instructions**:
+   - The game starts with the White player.
+   - Players will be asked to input their moves in **standard chess notation**, such as `e2 e4`.
+     - The first position represents the starting square, and the second position represents the destination square.
+     - For example, if you want to move the pawn from `e2` to `e4`, enter: 
+       ```
+       e2 e4
+       ```
+     - If you want to move the knight from `g1` to `f3`, enter: 
+       ```
+       g1 f3
+       ```
+
+4. **Valid Moves**:
+   - The game will validate each move according to standard chess rules for each piece.
+   - If a move is invalid (e.g., a piece tries to move through another piece, or a player tries to move a piece that doesn't belong to them), the game will prompt you to try again.
+   
+5. **Switching Turns**:
+   - Once a valid move is made, the turn automatically switches to the other player.
+
+6. **Board Display**:
+   - After each move, the board will be re-displayed to show the current positions of all pieces.
+   - Pieces are represented as follows:
+     - `WP` for White Pawns
+     - `BP` for Black Pawns
+     - `WR`, `BR` for Rooks
+     - `WN`, `BN` for Knights
+     - `WB`, `BB` for Bishops
+     - `WQ`, `BQ` for Queens
+     - `WK`, `BK` for Kings
+   - Empty squares are represented as `--`.
+
+### Example Gameplay
+
+When you run the program, it will look something like this:
+
+```plaintext
+-- -- -- -- -- -- -- -- 
+WP WP WP WP WP WP WP WP 
+-- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- 
+BP BP BP BP BP BP BP BP 
+BR BN BB BQ BK BB BN BR 
+
+White's turn
+Enter your move (e.g., e2 e4): 
+```
+
+If you enter a valid move like `e2 e4`, the program will update the board and switch to Black's turn:
+
+```plaintext
+-- -- -- -- -- -- -- -- 
+WP WP WP WP WP WP WP WP 
+-- -- -- -- -- -- -- -- 
+-- -- -- -- WP -- -- -- 
+-- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- 
+BP BP BP BP BP BP BP BP 
+BR BN BB BQ BK BB BN BR 
+
+Black's turn
+Enter your move (e.g., e7 e5): 
+```
+
+### Known Limitations
+- **No check/checkmate detection**: The program does not currently check for check or checkmate conditions.
+- **Special moves not supported**: Castling, en passant, and pawn promotion are not yet implemented.
+  
+### Future Enhancements
+- Implement check and checkmate detection.
+- Add support for special moves such as castling, en passant, and pawn promotion.
+- Provide additional options such as undoing a move or restarting the game.
+
+### Requirements
+- **Java Development Kit (JDK)**: Ensure you have JDK 8 or higher installed on your machine.
+
+---
+
+Enjoy playing chess in the terminal!
